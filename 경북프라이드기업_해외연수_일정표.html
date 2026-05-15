@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>2026 독일/스위스/이탈리아 9일 해외연수 일정표</title>
+<link href="https://fonts.googleapis.com/css2?family=Freesentation:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #1a2744;
+    --navy-mid: #243562;
+    --navy-light: #2e4080;
+    --gold: #c8a84b;
+    --gold-light: #e8c96a;
+    --gold-pale: #f7f0dc;
+    --red-accent: #c0392b;
+    --gray-bg: #f4f5f7;
+    --gray-line: #dde0e8;
+    --gray-muted: #8a90a0;
+    --text-dark: #1a2744;
+    --text-body: #3a4260;
+    --white: #ffffff;
+    --de-color: #2e4080;
+    --ch-color: #b22222;
+    --it-color: #2d7a3a;
+  }
+
+  body {
+    font-family: 'Freesentation', 'Malgun Gothic', sans-serif;
+    background: var(--gray-bg);
+    color: var(--text-body);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ── 헤더 ── */
+  .header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  }
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px 10px;
+    border-bottom: 1px solid rgba(200,168,75,0.3);
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo-emblem {
+    width: 38px;
+    height: 38px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--navy);
+    letter-spacing: -1px;
+    flex-shrink: 0;
+  }
+
+  .logo-text-block {
+    line-height: 1.25;
+  }
+
+  .logo-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gold-light);
+    letter-spacing: 0.5px;
+  }
+
+  .logo-sub {
+    font-size: 10px;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.3px;
+  }
+
+  .header-badge {
+    background: rgba(200,168,75,0.18);
+    border: 1px solid rgba(200,168,75,0.4);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: var(--gold-light);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .header-title-area {
+    padding: 10px 16px 14px;
+    text-align: center;
+  }
+
+  .header-main-title {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--white);
+    letter-spacing: -0.5px;
+  }
+
+  .header-main-title .flag-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  .country-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 30px;
+    letter-spacing: 0.2px;
+  }
+
+  .chip-de { background: rgba(46,64,128,0.7); color: #aabcf5; border: 1px solid rgba(170,188,245,0.35); }
+  .chip-ch { background: rgba(178,34,34,0.6); color: #ffaaaa; border: 1px solid rgba(255,170,170,0.35); }
+  .chip-it { background: rgba(45,122,58,0.6); color: #8de09a; border: 1px solid rgba(141,224,154,0.35); }
+
+  .header-date-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .header-date-row .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); display: inline-block; }
+
+  /* ── 요약 카드 ── */
+  .summary-section {
+    padding: 14px 14px 0;
+  }
+
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .summary-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid var(--gray-line);
+  }
+
+  .summary-num {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+  }
+
+  .summary-label {
+    font-size: 10px;
+    color: var(--gray-muted);
+    margin-top: 3px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+
+  .summary-card.gold .summary-num { color: var(--gold); }
+
+  /* ── 탭 네비게이션 ── */
+  .tab-nav {
+    padding: 14px 14px 0;
+    position: sticky;
+    top: 120px;
+    z-index: 90;
+    background: var(--gray-bg);
+  }
+
+  .tab-scroll {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    padding-bottom: 0;
+    scrollbar-width: none;
+  }
+
+  .tab-scroll::-webkit-scrollbar { display: none; }
+
+  .tab-btn {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    border-radius: 20px;
+    border: 1.5px solid var(--gray-line);
+    background: var(--white);
+    font-family: 'Freesentation', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .tab-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+
+  .tab-btn.active.de { background: var(--de-color); border-color: var(--de-color); }
+  .tab-btn.active.ch { background: var(--ch-color); border-color: var(--ch-color); }
+  .tab-btn.active.it { background: var(--it-color); border-color: var(--it-color); }
+  .tab-btn.active.all { background: var(--navy); border-color: var(--navy); }
+
+  /* ── 일별 카드 ── */
+  .days-container {
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .day-card {
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--gray-line);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+
+  .day-card[data-country="DE"] { border-top: 3px solid var(--de-color); }
+  .day-card[data-country="CH"] { border-top: 3px solid var(--ch-color); }
+  .day-card[data-country="IT"] { border-top: 3px solid var(--it-color); }
+  .day-card[data-country="MX"] { border-top: 3px solid #888; }
+
+  /* 날 헤더 */
+  .day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 14px;
+    background: var(--navy);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .day-card[data-country="DE"] .day-header { background: var(--de-color); }
+  .day-card[data-country="CH"] .day-header { background: var(--ch-color); }
+  .day-card[data-country="IT"] .day-header { background: var(--it-color); }
+  .day-card[data-country="MX"] .day-header { background: #666; }
+
+  .day-header-left { display: flex; align-items: center; gap: 10px; }
+
+  .day-badge {
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 8px;
+    padding: 4px 9px;
+    text-align: center;
+  }
+
+  .day-badge-num {
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1;
+  }
+
+  .day-badge-day {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+  }
+
+  .day-title-block {}
+
+  .day-date {
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 600;
+  }
+
+  .day-location {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+  }
+
+  .day-chevron {
+    font-size: 18px;
+    color: rgba(255,255,255,0.6);
+    transition: transform 0.3s;
+    font-weight: 300;
+  }
+
+  .day-card.collapsed .day-chevron { transform: rotate(-90deg); }
+
+  /* 콘텐츠 영역 */
+  .day-body {
+    padding: 0 14px 14px;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+    overflow: hidden;
+  }
+
+  .day-card.collapsed .day-body {
+    max-height: 0 !important;
+    opacity: 0;
+    padding-bottom: 0;
+  }
+
+  /* 항공 배너 */
+  .flight-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f0f3fa;
+    border-radius: 8px;
+    padding: 9px 12px;
+    margin: 12px 0 10px;
+    border-left: 3px solid var(--navy);
+  }
+
+  .flight-icon { font-size: 18px; }
+  .flight-info { flex: 1; }
+  .flight-num { font-size: 12px; font-weight: 700; color: var(--navy); }
+  .flight-route { font-size: 11px; color: var(--gray-muted); }
+  .flight-time { font-size: 12px; font-weight: 700; color: var(--navy); text-align: right; }
+
+  /* 숙소 배너 */
+  .hotel-banner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--gold-pale);
+    border-radius: 8px;
+    padding: 9px 12px;
+    margin: 10px 0 4px;
+    border-left: 3px solid var(--gold);
+  }
+
+  .hotel-icon { font-size: 16px; }
+  .hotel-name { font-size: 12px; font-weight: 700; color: #7a5c10; }
+  .hotel-label { font-size: 10px; color: #a07830; margin-bottom: 1px; }
+
+  /* 일정 타임라인 */
+  .timeline { padding-top: 12px; }
+
+  .tl-item {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    padding-bottom: 14px;
+  }
+
+  .tl-item:last-child { padding-bottom: 0; }
+
+  .tl-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28px;
+    flex-shrink: 0;
+  }
+
+  .tl-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid var(--navy);
+    background: var(--white);
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .tl-dot.visit { border-color: var(--gold); background: var(--gold); }
+  .tl-dot.expo { border-color: var(--red-accent); background: var(--red-accent); }
+  .tl-dot.tour { border-color: #5a8a6a; background: #5a8a6a; }
+  .tl-dot.transport { border-color: var(--gray-muted); background: var(--gray-muted); }
+  .tl-dot.arrival { border-color: var(--navy); background: var(--navy); }
+  .tl-dot.meal { border-color: #e07030; background: #e07030; }
+
+  .tl-line {
+    flex: 1;
+    width: 1.5px;
+    background: var(--gray-line);
+    margin-top: 2px;
+  }
+
+  .tl-right { flex: 1; }
+
+  .tl-tag {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 20px;
+    margin-bottom: 3px;
+    letter-spacing: 0.3px;
+  }
+
+  .tag-visit { background: #fff5dc; color: #8a5c10; border: 1px solid #e8c96a; }
+  .tag-expo { background: #fde8e8; color: #a32020; border: 1px solid #f5a0a0; }
+  .tag-tour { background: #e8f5ec; color: #2d6e3a; border: 1px solid #8dd09a; }
+  .tag-transport { background: #f0f0f4; color: #5a5a70; border: 1px solid #c8c8d8; }
+  .tag-arrival { background: #e6eaf5; color: #2040a0; border: 1px solid #aabce8; }
+  .tag-meal { background: #fff0e8; color: #904010; border: 1px solid #f0b080; }
+  .tag-free { background: #f0f0f0; color: #606070; border: 1px solid #d0d0d0; }
+
+  .tl-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.35;
+  }
+
+  .tl-desc {
+    font-size: 12px;
+    color: var(--gray-muted);
+    margin-top: 3px;
+    line-height: 1.5;
+  }
+
+  .tl-company-card {
+    background: #f6f8fc;
+    border-radius: 8px;
+    padding: 8px 10px;
+    margin-top: 6px;
+    border: 1px solid #dde2ef;
+  }
+
+  .company-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+  }
+
+  .company-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    background: var(--navy);
+    color: var(--gold-light);
+    border-radius: 4px;
+    padding: 1px 6px;
+    margin-left: 5px;
+    vertical-align: middle;
+    letter-spacing: 0.3px;
+  }
+
+  .company-addr {
+    font-size: 11px;
+    color: var(--gray-muted);
+    margin-top: 3px;
+  }
+
+  .company-url {
+    font-size: 11px;
+    color: #3a6ccb;
+    margin-top: 2px;
+    word-break: break-all;
+    text-decoration: none;
+  }
+
+  /* 식사 섹션 */
+  .meal-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .meal-chip {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--white);
+    border: 1px solid var(--gray-line);
+    border-radius: 20px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: var(--text-body);
+    font-weight: 600;
+  }
+
+  .meal-chip .meal-type {
+    font-size: 10px;
+    color: var(--gray-muted);
+    margin-right: 2px;
+  }
+
+  .meal-chip.bk { border-color: #f5d5b0; background: #fffaf4; }
+  .meal-chip.ln { border-color: #b0d5b0; background: #f4faf4; }
+  .meal-chip.dn { border-color: #b0c0e8; background: #f4f6ff; }
+
+  /* 교통편 칩 */
+  .transport-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #f0f3fa;
+    border-radius: 6px;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: var(--navy-mid);
+    font-weight: 600;
+    margin-top: 4px;
+  }
+
+  /* 구분선 */
+  .section-divider {
+    height: 1px;
+    background: var(--gray-line);
+    margin: 10px 0;
+  }
+
+  /* 국가 구분 배너 */
+  .country-banner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    margin: 4px 0 0;
+    border-radius: 10px 10px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+
+  .country-banner.de { background: #e8ecf5; color: var(--de-color); }
+  .country-banner.ch { background: #f8e8e8; color: var(--ch-color); }
+  .country-banner.it { background: #e8f2ea; color: var(--it-color); }
+
+  /* 주의사항 */
+  .notice-box {
+    background: #fffbe8;
+    border: 1px solid #e8d878;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin: 14px 14px 0;
+    font-size: 11.5px;
+    color: #7a6010;
+    line-height: 1.6;
+  }
+
+  .notice-box strong { font-weight: 700; }
+
+  /* 푸터 */
+  .footer {
+    text-align: center;
+    padding: 20px 14px 32px;
+    color: var(--gray-muted);
+    font-size: 11px;
+    line-height: 1.8;
+  }
+
+  .footer strong { color: var(--navy); font-weight: 700; }
+
+  /* 접기/펼치기 */
+  .toggle-all-btn {
+    display: block;
+    width: calc(100% - 28px);
+    margin: 14px auto 0;
+    padding: 10px;
+    border: 1.5px solid var(--navy);
+    background: var(--white);
+    border-radius: 8px;
+    font-family: 'Freesentation', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: all 0.2s;
+  }
+
+  .toggle-all-btn:active { background: var(--navy); color: var(--white); }
+
+  /* 반응형 조정 */
+  @media (max-width: 360px) {
+    .summary-num { font-size: 18px; }
+    .header-main-title { font-size: 18px; }
+  }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<!-- ── 헤더 ── -->
+<div class="header">
+  <div class="header-top">
+    <div class="logo-area">
+      <div class="logo-emblem">청</div>
+      <div class="logo-text-block">
+        <div class="logo-name">청년기획</div>
+        <div class="logo-sub">공공기관·기업체 맞춤형 해외연수 컨설팅</div>
+      </div>
+    </div>
+    <div class="header-badge">9박 10일</div>
+  </div>
+  <div class="header-title-area">
+    <div class="header-main-title">2026 해외연수 일정표</div>
+    <div class="flag-row" style="margin-top:8px; display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap;">
+      <span class="country-chip chip-de">🇩🇪 독일</span>
+      <span style="color:rgba(255,255,255,0.3); font-size:12px;">+</span>
+      <span class="country-chip chip-ch">🇨🇭 스위스</span>
+      <span style="color:rgba(255,255,255,0.3); font-size:12px;">+</span>
+      <span class="country-chip chip-it">🇮🇹 이탈리아</span>
+    </div>
+    <div class="header-date-row">
+      <span>경북프라이드기업</span>
+      <span class="dot"></span>
+      <span>2026.11.24 (화) ~ 12.2 (수)</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── 요약 카드 ── -->
+<div class="summary-section">
+  <div class="summary-grid">
+    <div class="summary-card">
+      <div class="summary-num">9</div>
+      <div class="summary-label">총 일수</div>
+    </div>
+    <div class="summary-card gold">
+      <div class="summary-num">6</div>
+      <div class="summary-label">기업방문</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-num">3</div>
+      <div class="summary-label">방문국가</div>
+    </div>
+    <div class="summary-card">
+      <div class="summary-num">1</div>
+      <div class="summary-label">박람회</div>
+    </div>
+  </div>
+</div>
+
+<!-- 주의사항 -->
+<div class="notice-box">
+  ⚠️ <strong>안내:</strong> 상기 일정은 현지 사정에 의해 변경될 수 있습니다.
+</div>
+
+<!-- ── 탭 네비게이션 ── -->
+<div class="tab-nav">
+  <div class="tab-scroll">
+    <button class="tab-btn active all" onclick="filterDays('all', this)">전체</button>
+    <button class="tab-btn de" onclick="filterDays('DE', this)">🇩🇪 독일</button>
+    <button class="tab-btn ch" onclick="filterDays('CH', this)">🇨🇭 스위스</button>
+    <button class="tab-btn it" onclick="filterDays('IT', this)">🇮🇹 이탈리아</button>
+    <button class="tab-btn" onclick="filterDays('visit', this)">🏭 기업방문</button>
+    <button class="tab-btn" onclick="filterDays('EXPO', this)">📋 박람회</button>
+  </div>
+</div>
+
+<button class="toggle-all-btn" id="toggleAllBtn" onclick="toggleAll()">▲ 전체 접기</button>
+
+<!-- ── 일정 카드들 ── -->
+<div class="days-container" id="daysContainer">
+
+  <!-- 제1일 -->
+  <div class="day-card" data-country="DE" data-tags="arrival" id="day1">
+    <div class="day-header" onclick="toggleDay('day1')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">1</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/24 (화)</div>
+          <div class="day-location">인천 → 프랑크푸르트 🇩🇪</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 600px;">
+      <div class="flight-banner">
+        <div class="flight-icon">✈️</div>
+        <div class="flight-info">
+          <div class="flight-num">OZ 541</div>
+          <div class="flight-route">인천 출발 → 프랑크푸르트 도착</div>
+        </div>
+        <div class="flight-time">10:50 → 17:40<br><span style="font-size:10px;color:var(--gray-muted);">약 13시간 50분</span></div>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot arrival"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-arrival">출국</span>
+            <div class="tl-title">인천 국제공항 출발</div>
+            <div class="tl-desc">OZ 541편 탑승</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot arrival"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-arrival">입국</span>
+            <div class="tl-title">프랑크푸르트 도착</div>
+            <div class="tl-desc">입국 심사 및 세관신고 후 현지 가이드 미팅</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 후 호텔 휴식</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">MARITIM FRANKFURT HOTEL</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>현지식</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제2일 -->
+  <div class="day-card" data-country="DE" data-tags="visit" id="day2">
+    <div class="day-header" onclick="toggleDay('day2')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">2</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/25 (수)</div>
+          <div class="day-location">프랑크푸르트 · 뷔르츠부르크 · 뉘른베르크</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 900px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">문화탐방</span>
+            <div class="tl-title">프랑크푸르트 문화탐방</div>
+            <div class="tl-desc">뢰머 광장, 시청사, 아이젤너 다리, 대성당 등</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">뷔르츠부르크로 이동</div>
+            <div class="tl-desc">약 110km / 1시간 30분</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot visit"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-visit">기업방문 1</span>
+            <div class="tl-company-card">
+              <div class="company-name">Koenig &amp; Bauer<span class="company-badge">히든챔피언</span></div>
+              <div class="company-addr">📍 Friedrich-Koenig-Str. 4, 97080 Würzburg</div>
+              <div class="company-addr">📞 +49-931 909-0</div>
+              <a class="company-url" href="https://www.koenig-bauer.com/en/">koenig-bauer.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">뉘른베르크로 이동</div>
+            <div class="tl-desc">약 110km / 1시간 30분</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 후 호텔 휴식</div>
+            <div class="tl-desc">슈바인학세 + 맥주 1잔</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">Scandic Nürnberg Central</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>현지식</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>슈바인학세</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제3일 -->
+  <div class="day-card" data-country="DE" data-tags="EXPO visit" id="day3">
+    <div class="day-header" onclick="toggleDay('day3')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">3</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/26 (목)</div>
+          <div class="day-location">뉘른베르크 · 슈투트가르트</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 900px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot expo"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-expo">박람회</span>
+            <div class="tl-title">뉘른베르크 국제 자동화 산업 박람회</div>
+            <div class="tl-desc">SPS: Smart Production Solutions 2026</div>
+            <div class="tl-company-card" style="border-color:#f5c0c0;">
+              <div class="company-addr">🔗 <a class="company-url" style="display:inline;" href="https://www.ifm.com/na/en/shared/events/trade-fair/sps">ifm.com — SPS 2026</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot visit"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-visit">기업방문 2</span>
+            <div class="tl-company-card">
+              <div class="company-name">LEONI Group<span class="company-badge">히든챔피언</span></div>
+              <div class="company-addr">📍 Marienstraße 5, 90402 Nuremberg, Germany</div>
+              <div class="company-addr">📞 +49 911 2023-0</div>
+              <a class="company-url" href="https://www.leoni.com/">leoni.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">슈투트가르트로 이동</div>
+            <div class="tl-desc">약 220km / 2시간 30분</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 후 호텔 휴식</div>
+            <div class="tl-desc">그릴 뷔페</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">Dormero Stuttgart</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>현지식</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>중국식·그릴뷔페</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제4일 -->
+  <div class="day-card" data-country="DE" data-tags="visit" id="day4">
+    <div class="day-header" onclick="toggleDay('day4')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">4</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/27 (금)</div>
+          <div class="day-location">슈투트가르트 · 아우크스부르크</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 1000px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot visit"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-visit">기업방문 3</span>
+            <div class="tl-company-card">
+              <div class="company-name">메르세데스-벤츠 팩토리</div>
+              <div class="company-addr">📍 Experiences in Sindelfingen</div>
+              <a class="company-url" href="https://kundencenter-booking.mercedes-benz.de">mercedes-benz.de</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">아우크스부르크로 이동</div>
+            <div class="tl-desc">약 150km / 2시간</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot visit"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-visit">기업방문 4</span>
+            <div class="tl-company-card">
+              <div class="company-name">KUKA Roboter GmbH<span class="company-badge">히든챔피언</span></div>
+              <div class="company-addr">📍 Zugspitzstraße 140, 86165 Augsburg</div>
+              <div class="company-addr">📞 +49 821 797-4000</div>
+              <a class="company-url" href="https://www.kuka.com/">kuka.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">문화탐방</span>
+            <div class="tl-title">아우크스부르크 문화탐방</div>
+            <div class="tl-desc">막시밀리언 거리, 라프 지구, 푸거라이, 성 안나 교회 등</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 후 호텔 휴식</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">Dorint An der Kongresshalle Augsburg</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>현지식</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>현지식</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제5일 -->
+  <div class="day-card" data-country="CH" data-tags="" id="day5">
+    <div class="day-header" onclick="toggleDay('day5')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">5</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/28 (토)</div>
+          <div class="day-location">아우크스부르크 → 퓌센 → 인터라켄 🇨🇭</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 900px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">퓌센으로 이동</div>
+            <div class="tl-desc">약 105km / 1시간 30분</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">명소탐방</span>
+            <div class="tl-title">노이슈반슈타인 성 내부 입장</div>
+            <div class="tl-desc">백조의 성 내부 관람 + 왕복 마차 탑승, 호엔슈방가우 성 탐방</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">인터라켄으로 이동</div>
+            <div class="tl-desc">약 350km / 4시간 30분 · 스위스 입국</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">탐방</span>
+            <div class="tl-title">인터라켄 마을 탐방</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 후 호텔 휴식</div>
+            <div class="tl-desc">미트 퐁듀</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">City Oberland Hotel, Interlaken</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>현지식</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>미트 퐁듀</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제6일 -->
+  <div class="day-card" data-country="CH" data-tags="" id="day6">
+    <div class="day-header" onclick="toggleDay('day6')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">6</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/29 (일)</div>
+          <div class="day-location">인터라켄 · 융프라우 · 몽트뢰 · 제네바</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 900px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">하이라이트</span>
+            <div class="tl-title">융프라우 등정 ⛰️</div>
+            <div class="tl-desc">알프스 영봉 융프라우 등정 후 하산</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">몽트뢰로 이동</div>
+            <div class="tl-desc">약 150km / 2시간</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">문화탐방</span>
+            <div class="tl-title">몽트뢰 문화탐방</div>
+            <div class="tl-desc">시용 성 외부 전경 감상 (13세기 중세 고성), 레만 호수, 프레디 머큐리 동상 등</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">제네바로 이동</div>
+            <div class="tl-desc">약 90km / 1시간</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 및 호텔 투숙</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">Mövenpick Geneva Hotel</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>한식</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>현지식</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제7일 -->
+  <div class="day-card" data-country="IT" data-tags="visit" id="day7">
+    <div class="day-header" onclick="toggleDay('day7')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">7</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">11/30 (월)</div>
+          <div class="day-location">제네바 → 밀라노 🇮🇹</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 900px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot visit"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-visit">기업방문 5</span>
+            <div class="tl-company-card">
+              <div class="company-name">Logitech<span class="company-badge">히든챔피언</span></div>
+              <div class="company-addr">📍 Daniel Borel Innovation Center, CH-1015 Lausanne</div>
+              <div class="company-addr">📞 +41 21-863-55-11</div>
+              <a class="company-url" href="https://www.logitech.com/en-ch">logitech.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">문화탐방</span>
+            <div class="tl-title">제네바 문화탐방</div>
+            <div class="tl-desc">생 피에르 성당, 영국공원, 제네바 호수, 유엔사무국 앞 부러진 의자 등</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot transport"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-transport">이동</span>
+            <div class="tl-title">밀라노로 이동 · 이탈리아 입국</div>
+            <div class="tl-desc">약 310km / 4시간 30분</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 및 호텔 투숙</div>
+            <div class="tl-desc">마짱꼴레</div>
+          </div>
+        </div>
+      </div>
+      <div class="hotel-banner">
+        <div class="hotel-icon">🏨</div>
+        <div>
+          <div class="hotel-label">숙소</div>
+          <div class="hotel-name">UNA Hotels Expo Fiera Milano</div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>일식</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>마짱꼴레</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제8일 -->
+  <div class="day-card" data-country="IT" data-tags="visit" id="day8">
+    <div class="day-header" onclick="toggleDay('day8')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">8</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">12/1 (화)</div>
+          <div class="day-location">밀라노 → 인천 출발</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 1000px;">
+      <div class="transport-chip">🚌 전용차량 이동</div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot visit"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-visit">기업방문 6</span>
+            <div class="tl-company-card">
+              <div class="company-name">Brembo N.V.<span class="company-badge" style="background:#2d7a3a;">자동차 브레이크</span></div>
+              <div class="company-addr">📍 Via Stezzano, 87, 24126 Bergamo (BG), Italy</div>
+              <a class="company-url" href="https://www.brembo.com/en">brembo.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot tour"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-tour">문화탐방</span>
+            <div class="tl-title">밀라노 문화탐방</div>
+            <div class="tl-desc">밀라노 두오모 조망 (세계 4번째 규모), 스포르체스코 성, 비토리오 에마누엘레 2세 갤러리아, 스칼라 극장</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot meal"></div><div class="tl-line"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-meal">저녁</span>
+            <div class="tl-title">석식 후 공항으로 이동</div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot arrival"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-arrival">귀국</span>
+            <div class="tl-title">밀라노 출발 (22:00)</div>
+            <div class="tl-desc">OZ 582편 탑승</div>
+          </div>
+        </div>
+      </div>
+      <div class="meal-row">
+        <div class="meal-chip bk"><span class="meal-type">조식</span>호텔식</div>
+        <div class="meal-chip ln"><span class="meal-type">중식</span>스테이크</div>
+        <div class="meal-chip dn"><span class="meal-type">저녁</span>한식</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제9일 -->
+  <div class="day-card" data-country="MX" data-tags="arrival" id="day9">
+    <div class="day-header" onclick="toggleDay('day9')">
+      <div class="day-header-left">
+        <div class="day-badge">
+          <div class="day-badge-num">9</div>
+          <div class="day-badge-day">DAY</div>
+        </div>
+        <div class="day-title-block">
+          <div class="day-date">12/2 (수)</div>
+          <div class="day-location">인천 국제공항 도착 🇰🇷</div>
+        </div>
+      </div>
+      <div class="day-chevron">▾</div>
+    </div>
+    <div class="day-body" style="max-height: 400px;">
+      <div class="flight-banner">
+        <div class="flight-icon">✈️</div>
+        <div class="flight-info">
+          <div class="flight-num">OZ 582</div>
+          <div class="flight-route">밀라노 출발 → 인천 도착</div>
+        </div>
+        <div class="flight-time">16:35<br><span style="font-size:10px;color:var(--gray-muted);">약 11시간 35분</span></div>
+      </div>
+      <div class="timeline" style="margin-top:10px;">
+        <div class="tl-item">
+          <div class="tl-left"><div class="tl-dot arrival"></div></div>
+          <div class="tl-right">
+            <span class="tl-tag tag-arrival">귀국</span>
+            <div class="tl-title">인천 국제공항 도착 (16:35)</div>
+            <div class="tl-desc">약 11시간 35분 소요 · 연수 종료</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; padding: 16px 0 4px;">
+        <div style="font-size:22px;">🎉</div>
+        <div style="font-size:13px; font-weight:700; color:var(--navy); margin-top:4px;">연수 일정 완료</div>
+        <div style="font-size:11px; color:var(--gray-muted); margin-top:2px;">2026.11.24 ~ 12.2 (9일간)</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── 범례 ── -->
+<div style="padding: 0 14px 14px;">
+  <div style="background:var(--white); border-radius:12px; border:1px solid var(--gray-line); padding:12px 14px;">
+    <div style="font-size:12px; font-weight:700; color:var(--navy); margin-bottom:8px;">일정 유형 안내</div>
+    <div style="display:flex; flex-wrap:wrap; gap:6px;">
+      <span class="tl-tag tag-visit" style="font-size:11px;">기업방문</span>
+      <span class="tl-tag tag-expo" style="font-size:11px;">박람회</span>
+      <span class="tl-tag tag-tour" style="font-size:11px;">문화탐방</span>
+      <span class="tl-tag tag-transport" style="font-size:11px;">이동</span>
+      <span class="tl-tag tag-arrival" style="font-size:11px;">출·입국</span>
+      <span class="tl-tag tag-meal" style="font-size:11px;">식사</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── 푸터 ── -->
+<div class="footer">
+  <strong>청년기획</strong><br>
+  공공기관·기업체 맞춤형 해외연수 컨설팅<br>
+  <span style="color:#bbb;">※ 본 일정표는 경북프라이드기업 전용입니다</span>
+</div>
+
+<script>
+  function toggleDay(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('collapsed');
+    updateToggleAllBtn();
+  }
+
+  function toggleAll() {
+    const cards = document.querySelectorAll('.day-card:not(.hidden)');
+    const anyOpen = Array.from(cards).some(c => !c.classList.contains('collapsed'));
+    cards.forEach(c => {
+      if (anyOpen) c.classList.add('collapsed');
+      else c.classList.remove('collapsed');
+    });
+    updateToggleAllBtn();
+  }
+
+  function updateToggleAllBtn() {
+    const cards = document.querySelectorAll('.day-card:not(.hidden)');
+    const anyOpen = Array.from(cards).some(c => !c.classList.contains('collapsed'));
+    document.getElementById('toggleAllBtn').textContent = anyOpen ? '▲ 전체 접기' : '▼ 전체 펼치기';
+  }
+
+  function filterDays(filter, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cards = document.querySelectorAll('.day-card');
+    cards.forEach(card => {
+      if (filter === 'all') {
+        card.classList.remove('hidden');
+      } else if (filter === 'DE' || filter === 'CH' || filter === 'IT') {
+        card.classList.toggle('hidden', card.dataset.country !== filter);
+      } else if (filter === 'visit') {
+        card.classList.toggle('hidden', !card.dataset.tags.includes('visit'));
+      } else if (filter === 'EXPO') {
+        card.classList.toggle('hidden', !card.dataset.tags.includes('EXPO'));
+      }
+    });
+    updateToggleAllBtn();
+  }
+
+  document.querySelectorAll('.day-body').forEach(body => {
+    const card = body.closest('.day-card');
+    if (!card.classList.contains('collapsed')) {
+      body.style.maxHeight = body.scrollHeight + 50 + 'px';
+    }
+  });
+</script>
+</body>
+</html>
